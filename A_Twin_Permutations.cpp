@@ -6,9 +6,20 @@ using namespace std;
 #define ar array
 
 void solve() {
-  int n;
+  int n, mx = 0;
   cin >> n;
-  cout << (n % 4 == 0 ? "Bob" : "Alice") << "\n";
+  vector<int> arr(n);
+  for (int i = 0; i < n; i++) {
+    int x;
+    cin >> x;
+    mx = max(mx, x);
+    arr[i] = x;
+  }
+
+  for (int i = 0; i < n; i++) {
+    cout << mx - arr[i] + 1 << " ";
+  }
+  cout << "\n";
 }
 
 

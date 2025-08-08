@@ -6,11 +6,13 @@ using namespace std;
 #define ar array
 
 void solve() {
-  int n;
-  cin >> n;
-  cout << (n % 4 == 0 ? "Bob" : "Alice") << "\n";
-}
+  string m;
+  cin >> m;
+  int n = m.size() - 1;
+  ll rest = stoll(m);
 
+  cout << rest - (ll) pow(10, n) << endl;
+}
 
 int main() {
   ios_base::sync_with_stdio(false);
@@ -20,4 +22,4 @@ int main() {
   cin >> t;
   while(t--)
     solve();
-} 
+}

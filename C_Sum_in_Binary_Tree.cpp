@@ -1,23 +1,28 @@
 #include <bits/stdc++.h>
 
+#define ll long long
+
 using namespace std;
 
-#define ll long long
-#define ar array
-
 void solve() {
-  int n;
+  ll n, ans = 0;
   cin >> n;
-  cout << (n % 4 == 0 ? "Bob" : "Alice") << "\n";
-}
+  
+  ans += n;
+  while (n > 1) {
+    n /= 2;
+    ans += n;
+  }
 
+  cout << ans << endl;
+}
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(0);
-  
+
   int t;
   cin >> t;
-  while(t--)
-    solve();
-} 
+  while (t--) 
+      solve();
+}

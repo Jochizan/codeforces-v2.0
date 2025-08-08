@@ -8,9 +8,8 @@ using namespace std;
 void solve() {
   int n;
   cin >> n;
-  cout << (n % 4 == 0 ? "Bob" : "Alice") << "\n";
+  cout << (n % 2 != 0 ? "Kosuke" : "Sakurako") << endl;
 }
-
 
 int main() {
   ios_base::sync_with_stdio(false);
@@ -20,4 +19,4 @@ int main() {
   cin >> t;
   while(t--)
     solve();
-} 
+}

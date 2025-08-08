@@ -6,9 +6,11 @@ using namespace std;
 #define ar array
 
 void solve() {
-  int n;
-  cin >> n;
-  cout << (n % 4 == 0 ? "Bob" : "Alice") << "\n";
+  int a, b;
+  cin >> a >> b;
+//  cout << ((a + b) % 2 == 0 ? "Bob" : "Alice") << "\n";
+  cout << (abs(a - b) > 1 ? "Alice" : "Bob") << "\n";
+
 }
 
 
@@ -20,4 +22,4 @@ int main() {
   cin >> t;
   while(t--)
     solve();
-} 
+}
